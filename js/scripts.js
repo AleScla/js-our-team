@@ -1,4 +1,6 @@
 console.log('js funziona');
+
+let row = document.querySelector('.row');
 const members = [
     {
         names: 'Wayne Barnett',
@@ -36,7 +38,20 @@ console.log(members);
 for (let i = 0; i < members.length; i++){
     console.log(members[i]);
     for (let key in members[i]){
-        document.querySelector('main').innerHTML += (members[i][key]) + ' ';
+        console.log(members[i][key]);
     }
 }
 
+for (let i = 0; i < members.length; i++){
+    row.innerHTML += 
+    `<div class="col-4 mb-3">
+        <div class="card text-center">
+            <img src="img/${members[i]['img']}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">${members[i]['names']}</h5>
+                <p class="card-text">${members[i]['role']}</p>
+            </div>
+        </div>        
+    </div>
+    `       
+}
