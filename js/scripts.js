@@ -1,7 +1,7 @@
 console.log('js funziona');
 
 let row = document.querySelector('.row');
-const members = [
+const members = [ // creato array di oggetti
     {
         names: 'Wayne Barnett',
         role: 'Founder & CEO',
@@ -32,18 +32,15 @@ const members = [
         role: 'Graphic Designer',
         img: 'barbara-ramos-graphic-designer.jpg'
     }
-]
+];
 console.log(members);
 
 for (let i = 0; i < members.length; i++){
     console.log(members[i]);
-    for (let key in members[i]){
+    for (let key in members[i]){ // stampo gli elementi in console
         console.log(members[i][key]);
     }
-}
-
-for (let i = 0; i < members.length; i++){
-    row.innerHTML += 
+    row.innerHTML +=  //sfrutto lo stesso ciclo per stampare le card in html con le relative info
     `<div class="col-4 mb-3">
         <div class="card text-center">
             <img src="img/${members[i]['img']}" class="card-img-top">
@@ -53,5 +50,7 @@ for (let i = 0; i < members.length; i++){
             </div>
         </div>        
     </div>
-    `       
+    `;  
 }
+
+
