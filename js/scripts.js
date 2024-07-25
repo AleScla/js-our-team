@@ -35,5 +35,8 @@ console.log(members);
 
 for (let i = 0; i < members.length; i++){
     console.log(members[i]);
+    for (let key in members[i]){
+        document.querySelector('main').innerHTML += (members[i][key]) + ' ';
+    }
 }
 
